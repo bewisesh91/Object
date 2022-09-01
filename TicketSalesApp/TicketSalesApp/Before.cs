@@ -116,4 +116,30 @@
             return ticketOffice;
         }
     }
+
+    public class Theater
+    {
+        private TicketSeller ticketSeller;
+
+        public Theater(TicketSeller ticketSeller)
+        {
+            this.ticketSeller = ticketSeller;
+        }
+
+        public void Enter(Audience audience)
+        {
+            if (audience.GetBag().HasInvitation())
+            {
+                Ticket ticket = ticketSeller.GetTicketOffice().GetTicket();
+                audience.GetBag().SetTicket(ticket);
+            }
+            else
+            {
+                Ticket ticket = ticketSeller.GetTicketOffice().GetTicket();
+                audience.GetBag().MinusAmount(ticket.GetFee());
+                ticketSeller.GetTicketOffice().PlusAmount(ticket.GetFee());
+                audience.GetBag().SetTicket(ticket);
+            }
+        }
+    }
 }
