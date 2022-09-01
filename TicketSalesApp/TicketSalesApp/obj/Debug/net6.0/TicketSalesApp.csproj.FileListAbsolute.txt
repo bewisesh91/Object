@@ -1,0 +1,5 @@
+C:\Users\seunghyun.m\Desktop\Study_Files\object\TicketSalesApp\TicketSalesApp\obj\Debug\net6.0\TicketSalesApp.csproj.AssemblyReference.cache
+C:\Users\seunghyun.m\Desktop\Study_Files\object\TicketSalesApp\TicketSalesApp\obj\Debug\net6.0\TicketSalesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seunghyun.m\Desktop\Study_Files\object\TicketSalesApp\TicketSalesApp\obj\Debug\net6.0\TicketSalesApp.AssemblyInfoInputs.cache
+C:\Users\seunghyun.m\Desktop\Study_Files\object\TicketSalesApp\TicketSalesApp\obj\Debug\net6.0\TicketSalesApp.AssemblyInfo.cs
+C:\Users\seunghyun.m\Desktop\Study_Files\object\TicketSalesApp\TicketSalesApp\obj\Debug\net6.0\TicketSalesApp.csproj.CoreCompileInputs.cache
