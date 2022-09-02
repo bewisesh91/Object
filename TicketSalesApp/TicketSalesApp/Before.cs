@@ -1,4 +1,4 @@
-﻿namespace Before
+﻿namespace Before_origianl
 { 
     public class Invitation 
     {
@@ -115,22 +115,6 @@
         {
             return ticketOffice;
         }
-
-        public void SellTo(Audience audience)
-        {
-            if (audience.GetBag().HasInvitation())
-            {
-                Ticket ticket = ticketOffice.GetTicket();
-                audience.GetBag().SetTicket(ticket);
-            }
-            else
-            {
-                Ticket ticket = ticketOffice.GetTicket();
-                audience.GetBag().MinusAmount(ticket.GetFee());
-                ticketOffice.PlusAmount(ticket.GetFee());
-                audience.GetBag().SetTicket(ticket);
-            }
-        }
     }
 
     public class Theater
@@ -144,7 +128,18 @@
 
         public void Enter(Audience audience)
         {
-            ticketSeller.SellTo(audience);
+            if (audience.GetBag().HasInvitation())
+            {
+                Ticket ticket = ticketSeller.GetTicketOffice().GetTicket();
+                audience.GetBag().SetTicket(ticket);
+            }
+            else
+            {
+                Ticket ticket = ticketSeller.GetTicketOffice().GetTicket();
+                audience.GetBag().MinusAmount(ticket.GetFee());
+                ticketSeller.GetTicketOffice().PlusAmount(ticket.GetFee());
+                audience.GetBag().SetTicket(ticket);
+            }
         }
     }
 }
