@@ -11,6 +11,15 @@
         this.whenScreend = whenScreend;
     }
 
+    public Reservation Reserve(Customer customer, int audienceCount)
+    {
+        return new Reservation(customer, this, CalculateFee(audienceCount), audienceCount);
+    }
+    private Money CalculateFee(int audienceCount)
+    {
+        return movie.CalculateMovieFee(this).Times(audienceCount);
+    }
+
     public DateTime GetStartTime()
     {
         return whenScreend;
@@ -24,15 +33,5 @@
     public Money GetMovieFee()
     {
         return movie.GetFee();
-    }
-    
-    public Reservation reserve(Customer customer, int audienceCount)
-    {
-        return new Reservation(customer, this, CalculateFee(audienceCount), audienceCount);
-    }
-
-    private Money CalculateFee(int audienceCount)
-    {
-        return movie.CalculateMovieFee(this).Times(audienceCount);
-    }
+    }    
 }

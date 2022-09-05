@@ -1,7 +1,7 @@
-﻿public class PercentDiscountPolicy : DiscountPolicy
+﻿public class PercentDiscountPolicy : DefaultDiscountPolicy
 {
     private double percent;
-    public PercentDiscountPolicy(double percent, List<DiscountCondition> conditions) : base(conditions)
+    public PercentDiscountPolicy(double percent, params DiscountCondition[] conditions) : base(conditions)
     {
         this.percent = percent;
     }

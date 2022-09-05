@@ -1,7 +1,7 @@
-﻿public class AmountDiscountPolicy : DiscountPolicy
+﻿public class AmountDiscountPolicy : DefaultDiscountPolicy
 {
     private Money discountAmount;
-    public AmountDiscountPolicy(Money discountAmount, List<DiscountCondition> conditions) : base(conditions)
+    public AmountDiscountPolicy(Money discountAmount, params DiscountCondition[] conditions) : base(conditions)
     {
         this.discountAmount = discountAmount;
     }

@@ -21,4 +21,9 @@
     {
         return fee.Minus(discountPolicy.CalculateDiscountAmount(screening));
     }
+
+    public void ChangeDiscountPolicy(DiscountPolicy discountPolicy)
+    {
+        this.discountPolicy = discountPolicy;
+    }
 }

@@ -1,8 +1,8 @@
 ﻿public class Money
 {
-    public static Money ZERO = Wons(0);
+    public static readonly Money ZERO = Wons(0);
 
-    private decimal amount;
+    private readonly decimal amount;
 
     public Money(decimal amount)
     {
